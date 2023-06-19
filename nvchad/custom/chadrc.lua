@@ -15,7 +15,7 @@ M.ui = {
     theme = "minimal",
   },
   nvdash = {
-    load_on_startup = true,
+    load_on_startup = false,
     header = {
       "███╗   ██╗██╗   ██╗ ██████╗██╗  ██╗ █████╗ ██████╗ ",
       "████╗  ██║██║   ██║██╔════╝██║  ██║██╔══██╗██╔══██╗",
@@ -23,6 +23,14 @@ M.ui = {
       "██║╚██╗██║╚██╗ ██╔╝██║     ██╔══██║██╔══██║██║  ██║",
       "██║ ╚████║ ╚████╔╝ ╚██████╗██║  ██║██║  ██║██████╔╝",
       "╚═╝  ╚═══╝  ╚═══╝   ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ",
+    },
+  },
+  --lsp below is unmodified; modify it when neccessary
+    lsp = {
+    -- show function signatures i.e args as you type
+    signature = {
+      disabled = false,
+      silent = true, -- silences 'no signature help available' message from appearing
     },
   },
 }

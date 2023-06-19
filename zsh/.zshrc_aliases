@@ -56,15 +56,6 @@ alias gr="function _hn(){ search_term=\$(echo \$@ | tr ' ' '+'); brave-browser '
 alias ga="function _hr(){ search_term=\$(echo \$@ | tr ' ' '+'); brave-browser 'https://www.google.com/search?q='\$search_term'+site:https://news.ycombinator.com+OR+site:https://www.reddit.com/'; exit; };_hr"
 alias gf="function _hr(){ search_term=\$(echo \$@ | tr ' ' '+'); brave-browser 'https://www.google.com/search?q='\$search_term'+site:https://www.freecodecamp.org/+OR+site:https://dev.to/+OR+site:https://medium.com/'; exit; };_hr"
 alias gof="function _hr(){ search_term=\$(echo \$@ | tr ' ' '+'); brave-browser 'https://www.google.com/search?q='\$search_term'+site:https://www.freecodecamp.org/'; exit; };_hr"
-alias ms='cd /home/archit/Pictures/Screenshots/
-latest_file=$(ls -t | head -n1)
-timestamp=$(date -r "$latest_file" +"%Y-%m-%d_%H-%M-%S")
-extension="${latest_file##*.}"
-filename="${latest_file%.*}"
-echo "Latest screenshot: $latest_file ($timestamp)"
-echo -n "Enter new filename: "
-read new_filename
-mv "$latest_file" "${new_filename}.${extension}"'
 alias createjsx='touch One.jsx Two.jsx Three.jsx Four.jsx Five.jsx Six.jsx Seven.jsx Eight.jsx Nine.jsx Ten.jsx Eleven.jsx Twelve.jsx Thirteen.jsx Fourteen.jsx Fifteen.jsx'
 alias rea='npm create vite@latest vite-project && cd vite-project && rm -rf public/ && npm i && cd src && rm -rf assets/ && echo "" > App.jsx && echo "const App = () => {" >> App.jsx && echo " return (" >> App.jsx && echo " <div>App</div>" >> App.jsx && echo " )" >> App.jsx && echo "}" >> App.jsx && echo "" >> App.jsx && echo "export default App" >> App.jsx && echo "" > index.css && echo "" > App.css && nvim App.jsx'
 alias live='npm run dev'
@@ -126,3 +117,4 @@ alias da='cd /data/'
 alias spd='speedometer -r wlp2s0'
 alias cam='mpv /dev/video0 --no-border'
 alias removenvim='rmrf ~/.config/nvim/ ~/.local/share/nvim/ ~/.local/state/nvim/ ~/.cache/nvim/'
+alias ms='~/shell_scripts/rename_screenshot.sh; cd ~/Pictures/Screenshots/'

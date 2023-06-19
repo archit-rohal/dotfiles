@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -50,10 +50,10 @@ local plugins = {
     "windwp/nvim-ts-autotag",
     event = "InsertEnter",
     config = function()
-    require('nvim-ts-autotag').setup()
+      require("nvim-ts-autotag").setup()
     end,
   },
-{
+  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       {
@@ -69,7 +69,16 @@ local plugins = {
         end,
       },
     },
-  }
+  },
+  {
+    "tpope/vim-surround",
+    lazy = false,
+  },
+  {
+    "easymotion/vim-easymotion",
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
