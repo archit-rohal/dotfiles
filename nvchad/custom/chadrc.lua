@@ -6,7 +6,7 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "radium",
-  theme_toggle = { "radium", "one_light" },
+  theme_toggle = { "radium", "radium" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,

@@ -78,6 +78,28 @@ local plugins = {
     "easymotion/vim-easymotion",
     lazy = false,
   },
+  {
+    "justinmk/vim-sneak",
+    lazy = false,
+  },
+  {
+    "tpope/vim-abolish",
+    lazy = false,
+  },
+  {
+    "tpope/vim-eunuch",
+    lazy = false,
+  },
+  {
+    "jackMort/ChatGPT.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  }
+
 
   -- To make a plugin not be loaded
   -- {
