@@ -79,10 +79,6 @@ local plugins = {
     lazy = false,
   },
   {
-    "justinmk/vim-sneak",
-    lazy = false,
-  },
-  {
     "tpope/vim-abolish",
     lazy = false,
   },
@@ -91,15 +87,9 @@ local plugins = {
     lazy = false,
   },
   {
-    "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
-  }
-
+    "3rd/image.nvim",
+    lazy = false,
+  },
 
   -- To make a plugin not be loaded
   -- {

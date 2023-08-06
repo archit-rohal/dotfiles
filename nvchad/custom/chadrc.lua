@@ -26,7 +26,7 @@ M.ui = {
     },
   },
   --lsp below is unmodified; modify it when neccessary
-    lsp = {
+  lsp = {
     -- show function signatures i.e args as you type
     signature = {
       disabled = false,
@@ -37,7 +37,15 @@ M.ui = {
 
 M.plugins = "custom.plugins"
 
+
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
+
+M.hologram = function()
+  require('hologram').setup{
+    auto_display = true -- WIP automatic markdown image display, may be prone to breaking
+  }
+end
+
 
 return M

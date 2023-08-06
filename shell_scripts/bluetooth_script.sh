@@ -23,14 +23,14 @@ fi
 # Try to connect to the Bluetooth speaker
 echo "Attempting to connect to Bluetooth speaker..."
 bluetoothctl << EOF
-connect F4:4E:FD:F0:F0:65
+connect F4:4E:FD:6C:38:99
 EOF
 
 # Wait for 2 minutes or until connected
 timeout=$((SECONDS + 120))
 while [ $SECONDS -lt $timeout ]; do
     # Check if the speaker is connected
-    if bluetoothctl info F4:4E:FD:F0:F0:65 | grep -q "Connected: yes"; then
+    if bluetoothctl info F4:4E:FD:6C:38:99 | grep -q "Connected: yes"; then
         echo "Connected to Bluetooth speaker."
         exit 0
     fi
@@ -42,7 +42,7 @@ done
 echo "Unable to connect to Bluetooth speaker within 2 minutes."
 echo "Powering off Bluetooth..."
 bluetoothctl << EOF
-disconnect F4:4E:FD:F0:F0:65
+disconnect F4:4E:FD:6C:38:99
 power off
 EOF
 

@@ -1,5 +1,5 @@
 function set_osd_title()
-	local name = mp.get_property_osd("filename")
+	local name = ""
 	local percent_pos = ""
 	local chapter = ""
 	local frames_dropped = ""
@@ -37,3 +37,4 @@ mp.observe_property("percent-pos", "number", set_osd_title)
 mp.observe_property("chapter", "string", set_osd_title)
 mp.observe_property("frame-drop-count", "number", set_osd_title)
 mp.observe_property("duration", "string", set_osd_title)
+

@@ -25,6 +25,7 @@ Plug 'kqito/vim-easy-replace'
 Plug 'tpope/vim-abolish'
 Plug 'justinmk/vim-sneak'
 Plug 'voldikss/vim-browser-search'
+Plug 'easymotion/vim-easymotion'
 
 
 set encoding=UTF-8

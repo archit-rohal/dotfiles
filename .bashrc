@@ -163,3 +163,6 @@ source /home/archit/fzf-marks/fzf-marks.plugin.bash
 
 # Installed mcfly; uncomment the below line to use mcfly - 
 # eval "$(mcfly init bash)"
+
+
+PATH=~/.console-ninja/.bin:$PATH
