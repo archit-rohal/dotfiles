@@ -1,6 +1,14 @@
 #Copied from .bashrc - 
 #pp is modified to work with zsh - 
 alias v='play_youtube() { mpv "$(xclip -o)" & disown; }; play_youtube && exit'
+# play_youtube() {
+# mpv "$(xclip -o)" & disown
+# }
+# play_youtube() {
+# mpv "$(youtube-dl -g "$(xclip -o)")" & disown
+# }
+# alias v='play_youtube'
+
 
 alias of='exit'
 alias po="apt-cache policy"
@@ -47,7 +55,10 @@ alias wo='shuf -n 10 /usr/share/dict/american-english'
 alias pid="ps axww -o pid,user,%cpu,%mem,start,time,command | fzf | sed 's/^ *//' | cut -f1 -d' '"
 alias j.='for f in $(find . -maxdepth 1 -type d | fzf); do cd "$f"; done'
 alias f.='find . -maxdepth 1 -type f | fzf | xargs -I{} xdg-open "{}"'
-alias fa="fzf --preview 'xdg-open {}' --bind 'enter:execute(xdg-open {})+abort' --preview-window=right:3:hidden && exit"
+#alias fa="fzf --preview 'xdg-open {}' --bind 'enter:execute(xdg-open {})+abort' --preview-window=right:3:hidden && exit"
+#alias fa='FILE="$(find ~/ -type f -print0 | fzf --preview "bat --color=always {}" --preview-window=right:60%:wrap --read0)"; cd "$(dirname "$FILE")" && xdg-open "$FILE"'
+alias fa='cd "$(find ~/ -type f -print0 | fzf --preview "bat --color=always {}" --preview-window=right:60%:wrap --read0 | xargs -0 dirname)"'
+
 alias ja='cd "$(find / -type d -print 2>/dev/null | fzf --preview '\''ls {}'\'')"'
 alias no="fzf --preview 'nvim -c \"set previewheight=2 | set syntax=on\" {}' --bind 'enter:execute(nvim {})+abort' --preview-window=right:3:hidden"
 alias gmail="google-chrome https://mail.google.com/; exit"
