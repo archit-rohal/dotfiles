@@ -97,6 +97,7 @@ nnoremap <leader>; :b<Space>
 nnoremap <leader>h <C-w>j
 nnoremap <leader>l <C-w>k
 nnoremap <leader>o :bdelete<CR>
+vnoremap <Leader>u "+y
 
 " Fzf -
 nnoremap <leader>f :Files<CR>

@@ -1,0 +1,57 @@
+source ~/.vimrc
+let mapleader = " "
+inoremap jk <Esc>
+inoremap JK <Esc>
+set scrolloff=8
+set number
+set relativenumber
+set numberwidth=3
+nnoremap J 21j
+nnoremap K 21k
+nnoremap E :q<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>a :%d<CR>
+nnoremap H gT
+nnoremap L gt
+set ideajump
+vnoremap <leader>u "+y
+nnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+Plug 'easymotion/vim-easymotion'
+set easymotion
+
+set history=1000
+set showmode
+set ideamarks
+set incsearch
+set sidescrolloff=5
+set visualbell
+set smartcase
+set showcmd
+nnoremap <leader>z :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>/ :action FindInPath<CR>
+nnoremap <leader>n :action EditSourceInNewWindow<CR>
+nnoremap <leader>l <C-Tab>
+nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>f :action GotoFile<CR>
+set surround
+nnoremap <Leader>z :action ToggleZenMode<CR>
+nnoremap <Leader>v :action Vcs.QuickListPopupAction<CR>
+nnoremap <Leader>e :action ShowErrorDescription<CR>
+nnoremap <Leader>su :action ShowUsages<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>sd :action ShowUmlDiagram<CR>
+nnoremap <Leader>ss :action ShowSettings<CR>
+nnoremap <Leader>sp :action ShowFilePath<CR>
+nnoremap <Leader>rf :action RecentFiles<CR>
+"p in 'pg' above refers to popuo
+nnoremap <leader>pg :action Generate<CR> 
+nnoremap <Leader>rl :action RecentLocations<CR>
+nnoremap <leader>sv :action SplitVertically <CR>
+nnoremap <leader>re :action Replace<CR>
+nnoremap <leader>ns :action NewScratchFile <CR>
+nnoremap <leader>nf :action NewElementSamePlace <CR>
+"nnoremap <leader>nf :action NewElementSamePlace <CR>
+nmap zj o<ESC>k
+nmap zk O<ESC>j
+set highlightedyank

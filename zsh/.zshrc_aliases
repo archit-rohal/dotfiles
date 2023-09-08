@@ -97,6 +97,7 @@ alias dupdate='sudo rsync -ruvhP  /etc/vim/vimrc ~/repos/dotfiles/vimrc_etc_vim_
     sudo rsync -ruvhP --delete-after ~/shell_scripts ~/repos/dotfiles/ &&
     sudo rsync -ruvhP --delete-after /etc/mpv/ ~/repos/dotfiles/etc_mpv/ && 
     sudo rsync -ruvhP ~/.config/vifm/vifmrc ~/repos/dotfiles/ && 
+    sudo rsync -ruvhP ~/.ideavimrc ~/repos/dotfiles/ &&
     sudo rsync -avhP --delete --recursive --exclude='.git' --exclude='.gitignore' ~/.zshrc ~/.zsh_history ~/.zshrc_aliases ~/.p10k.zsh ~/.oh-my-zsh ~/repos/dotfiles/zsh/ &&
     sudo rsync -ravhP --delete --exclude='.git' --exclude='.gitignore' ~/.config/nvim/lua/ ~/repos/dotfiles/nvchad/ &&
     cd ~/repos/dotfiles && git add . && 
