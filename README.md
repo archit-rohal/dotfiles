@@ -1,3 +1,3 @@
 # My dotfiles
 
-Dotfiles from ~/home/archit/ and /root/ 
+Dotfiles from home directory and ~/dotfiles/
