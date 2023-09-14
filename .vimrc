@@ -27,6 +27,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'voldikss/vim-browser-search'
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'terryma/vim-multiple-cursors'
 
 
 set encoding=UTF-8
